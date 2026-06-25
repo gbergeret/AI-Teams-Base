@@ -10,9 +10,10 @@ every rule and permission in git, the repo as the company.
 - `CLAUDE.md`: the master router. Decides which team handles a request and how
   teams combine.
 - `MEMORY.md` and `context/VOICE.md`: the shared, org-wide canon.
-- `teams/executive/`: the executive team. `cos.md` (front door), `ea.md`, `qa.md`.
-- `teams/engineering/`: the engineering team. `architect.md` (front door),
-  `frontend.md`, `backend.md`, `qa.md`.
+- `teams/<team>/MEMORY.md`: what each team has learned.
+- `teams/<team>/<role>/`: one folder per role, each with `ROLE.md` (what it does)
+  and `MEMORY.md` (what it has learned). Executive: `cos` (front door), `ea`,
+  `qa`. Engineering: `architect` (front door), `frontend`, `backend`, `qa`.
 - `.claude/agents/`: the subagents, named `<team>-<role>` (the front doors and
   specialists the router and teams delegate to).
 

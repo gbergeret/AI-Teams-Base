@@ -8,7 +8,8 @@ team handles a request and how teams combine.
 1. This router.
 2. `MEMORY.md` and `context/VOICE.md`: the shared, org-wide canon.
 
-Then route, and load only the team(s) the request needs.
+Then route, and load only the team(s) the request needs, including that team's
+`MEMORY.md` and the `MEMORY.md` of any role you act as.
 
 ## First run: the welcome wizard
 On the first session, if `playbooks/000-welcome-wizard.md` exists and the name
@@ -61,6 +62,12 @@ Add a `teams/<name>/` folder with its front-door and specialist role docs, add
 their `<name>-<role>` subagents to `.claude/agents/`, and add a row to the Teams
 table.
 
-## Keep memory current
-Update `MEMORY.md` (shared) or the relevant team's memory in place when you learn
-something. Replace what is outdated.
+## Memory layers
+Memory is layered:
+- **Shared** — `MEMORY.md` (root): what the whole organisation has learned.
+- **Team** — `teams/<team>/MEMORY.md`: what a team has learned.
+- **Role** — `teams/<team>/<role>/MEMORY.md`: what a specific role has learned.
+Load shared always, the team layer when working in that team, and the role layer
+when acting as that role. Keep each current in place (replace what is outdated).
+Put each learning at the narrowest layer it belongs to; on conflict the more
+specific layer wins.
