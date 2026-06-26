@@ -7,8 +7,9 @@ shares. Who you are lives in `context/PROFILE.md`. Keep it current: replace
 outdated lines in place, do not just append.
 
 ## The organisation
-- Two teams under a router. Executive (CoS front door, EA, QA) runs the business;
-  Engineering (Architect front door, frontend, backend, QA) builds the software.
+- Two teams under a router. Executive (CoS front door, EA, QA, plus the CISO —
+  the org-wide read-only security gate) runs the business; Engineering (Architect
+  front door, frontend, backend, Security Engineer, QA) builds the software.
   Roles live in `teams/`.
 
 ## In flight
